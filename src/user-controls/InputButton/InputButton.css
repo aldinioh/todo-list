@@ -1,0 +1,37 @@
+@import '../../elements/color.css';
+
+.input-button {
+    outline: 1px dashed var(--color-border);
+    padding: 8px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 12px;
+    color: var(--color-text-secondary);
+    transition: transform cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.4s;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(0.98);
+    }
+
+    &:active {
+        transform: scale(0.96);
+    }
+
+    & input {
+        padding: 0;
+        margin: 0;
+
+        border: none;
+
+        &:focus {
+            outline: none;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
