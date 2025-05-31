@@ -1,7 +1,6 @@
 import './App.css'
 import './elements/color.css'
 import './elements/type.css'
-import Guide from './user-controls/Guide/Guide'
 import InputButton from '../src/user-controls/InputButton/InputButton'
 import Checkbox from '../src/input-controls/Checkbox/Checkbox'
 import { useState } from 'react'
@@ -63,8 +62,6 @@ function App() {
         onChange={handleInputChange}
         onKeyDown={handleInputKeyDown}
       />
-      
-      <Guide text='Swipe to clear task' />
     </div>
   )
 }
