@@ -1,5 +1,8 @@
 import './checkbox.css'
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
+
+
+
 
 type CheckboxProps = {
   label: string
@@ -10,8 +13,6 @@ type CheckboxProps = {
 
 const Checkbox = ({ label, name, checked, className = '' }: CheckboxProps) => {
   const [isChecked, setIsChecked] = useState(checked)
-  const element = document.getElementById(name);
-  
 
   return (
     <div className={`checkbox-container ${className}`}>
