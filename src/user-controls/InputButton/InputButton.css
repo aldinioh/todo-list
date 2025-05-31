@@ -1,6 +1,6 @@
 @import '../../elements/color.css';
 
-.input-button {
+.input-button-container {
     outline: 1.4px dashed var(--color-border);
     padding: 8px;
     display: inline-flex;
@@ -12,11 +12,11 @@
     transition: transform cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.4s;
     cursor: pointer;
 
-    &:hover {
+    &:hover, &:focus {
         transform: scale(0.98);
     }
 
-    &:active {
+    &:active, &:focus {
         transform: scale(0.96);
     }
 

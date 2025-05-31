@@ -1,22 +1,34 @@
-// The actual shortcut is hardcoded, even if you were to display a different combination
-// it will not work.
-
 import './shortcut.css'
 
-import React from 'react'
+import { useRef } from 'react'
+
+var k = "";
 
 type ShortcutProps = {
-    icon: string
-    combination: string
+    shortcutKey: string
 }
 
-const Shortcut = ({ icon, combination }: ShortcutProps) => {
-  return (
-    <div className='shortcut'>
-        <span className={ icon }></span>
-        <p>{ combination }</p>
-    </div>
-  )
+const Shortcut = ({  shortcutKey }: ShortcutProps) => {
+    k = shortcutKey;
+
+    return (
+        <div className='shortcut'>
+            <p> { shortcutKey } </p>
+        </div>
+    )
 }
 
 export default Shortcut
+
+document.addEventListener("keypress", function onEvent(event) {
+    if(event.code == `Key${k}`) {
+        var ele = document.getElementById("task-input-button"); // I feel like ignoring nullable is a bad idea, plus its hard coded
+        if(document.activeElement == ele) {
+            event.stopPropagation();
+            return;
+        } 
+        
+        event.preventDefault();
+        ele?.focus();
+    }
+});

@@ -1,0 +1,71 @@
+@import '../../elements/color.css';
+
+.checkbox-container  {
+
+    label {
+        cursor: pointer;
+    }
+
+    input {
+        appearance: none;
+        -webkit-appearance: none;
+        width: 16px;
+        height: 16px;
+        border: 1px solid var(--color-border);
+        cursor: pointer;
+        border-radius: 6px;
+        transition: 
+            background-color 0.2s ease-in-out,
+            border 0.1s ease-in-out,
+            transform 0.1s ease-in-out,
+            border-radius 0.2s ease-in-out;
+
+        
+        &.checked {
+            border: none;
+            background-color: var(--color-blue);
+        }
+
+        &:active {
+            transform: scale(0.96);
+            border-color: var(--color-border-active);
+        }
+        
+        &:hover {
+            border-color: var(--color-border-hover);
+        }
+    }
+
+    .checkbox-label {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        width: fit-content;
+        
+        .mgc_check_fill {
+            position: absolute;
+            left: 4px;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+            opacity: 0;
+            visibility: hidden;
+            font-size: 12px;
+            color: #fff;
+            z-index: 2;
+            font-size: 8px;
+            transition:
+                font-size 0.2s ease-in-out,
+                opacity 0.3s ease-in-out,
+                visibility 50ms ease-in-out;
+        }
+
+        input:checked + .mgc_check_fill {
+          opacity: 1;
+          visibility: visible;
+          font-size: 12px;
+        }
+    }
+    
+}

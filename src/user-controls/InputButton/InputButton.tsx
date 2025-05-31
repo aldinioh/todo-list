@@ -9,11 +9,11 @@ type InputButtonProps = {
 
 const InputButton = ({ placeholder }: InputButtonProps) => {
   return (
-    <label className='input-button'>
+    <label className='input-button-container'>
         <div>
             <span className="mgc_add_line"></span>
-            <input type='text' placeholder={placeholder}></input>
-            <Shortcut icon='mgc_command_line' combination='J' />
+            <input id='task-input-button' type='text' placeholder={placeholder}></input>
+            <Shortcut shortcutKey='T' />
         </div>
     </label>
   )

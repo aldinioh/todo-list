@@ -1,6 +1,8 @@
 :root {
     --color-blue: #36A1D6;
     --color-border: #E1E4E8;
+    --color-border-hover: #C6CBD1;
+    --color-border-active: #9AA0A7;
     --color-grey-100: #E1E4E8; 
     --color-grey-400: #9AA0A7;
 
