@@ -14,8 +14,8 @@ function App() {
       <div className='tasks-container'>
       
       </div>
-      <InputButton placeholder='New Task'></InputButton>
-      {/* <Guide text='Swipe to clear task' /> */}
+      <InputButton placeholder='New Task' />
+      <Guide text='Swipe to clear task' />
     </div>
   )
 }
