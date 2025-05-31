@@ -1,4 +1,4 @@
-import './Guide.css'
+import './guide.css'
 
 import React from 'react'
 

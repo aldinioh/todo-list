@@ -1,0 +1,17 @@
+@import '../../elements/color.css';
+
+.shortcut {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;    
+    gap: 2px;
+    color: var(--color-grey-400);
+    background-color: var(--color-grey-100);
+    padding: 2px 4px;
+    font-size: 12px;
+    border-radius: 6px;
+
+    p {
+        margin: 0;
+    }
+}
