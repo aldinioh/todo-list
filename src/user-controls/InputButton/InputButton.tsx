@@ -3,18 +3,24 @@ import './inputButton.css'
 
 import React from 'react'
 
-type InputButtonProps = {
+type InputButtonProps = React.InputHTMLAttributes<HTMLInputElement> & {
+  id?: string;
   placeholder?: string;
 };
 
-const InputButton = ({ placeholder }: InputButtonProps) => {
+const InputButton = ({ id, placeholder, ...rest }: InputButtonProps) => {
   return (
     <label className='input-button-container'>
-        <div>
-            <span className="mgc_add_line"></span>
-            <input id='task-input-button' type='text' placeholder={placeholder}></input>
-            <Shortcut shortcutKey='T' />
-        </div>
+      <div>
+        <span className="mgc_add_line"></span>
+        <input
+          id={id}
+          type='text'
+          placeholder={placeholder}
+          {...rest}
+        />
+        <Shortcut shortcutKey='T' />
+      </div>
     </label>
   )
 }

@@ -1,0 +1,55 @@
+.todo-container {
+    position: relative;
+    max-width: fit-content;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 128px;
+    
+    > *:not(.guide) {
+        align-self: flex-start;
+    }
+
+    .tasks-heading {
+        margin: 0;
+        font-size: 20px;
+    }
+
+    .tasks-container {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+    }
+
+    .input-button-container {
+        margin-top: 16px;
+    }
+
+    .guide {
+        margin-top: 24px;
+    }
+}
+
+.create-task-animate {
+    animation: createTaskAnimation 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes createTaskAnimation {
+    0% {
+        transform: translateY(24px) scale(0.90);
+        opacity: 0;
+    }
+
+    80% {
+        transform: translateY(0px) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0px) scale(1);
+    }
+}
